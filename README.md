@@ -77,7 +77,7 @@ do
 cp "$FINAL_GENES"/*Final_Results/*final_genes_NT.fasta ./mitofinder_spades_Final_Genes
 done
 #
-echo = `date` job $JOB_NAME
+echo = `date` job $JOB_NAME done
 
 ```
 
