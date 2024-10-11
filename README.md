@@ -39,7 +39,7 @@ SAMPLEDIR_CONTIGS="path to spades contigs"
 
 # Loop through the R1 files
 for GETSAMPLENAME in ${SAMPLEDIR_CONTIGS}/*_spades_contigs.fasta; do
-    SAMPLENAME=$(basename "$GETSAMPLENAME" _spades_contigs.fasta.gz)
+    SAMPLENAME=$(basename "$GETSAMPLENAME" _spades_contigs.fasta)
     
     # Create a directory for the current sample
     mkdir -p ./mitofinder_spades_All_Results/${SAMPLENAME}
