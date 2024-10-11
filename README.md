@@ -72,7 +72,7 @@ cp    ./*spades_All_Results/${SAMPLENAME}/*.log ./mitofinder_spades_Final_Result
 done
 #
 mkdir mitofinder_spades_Final_Genes
-for FINAL_GENES in ./*_spades_Final_Results
+for FINAL_GENES in ./*spades_Final_Results
 do
 cp "$FINAL_GENES"/*Final_Results/*final_genes_NT.fasta ./mitofinder_spades_Final_Genes
 done
