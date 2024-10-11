@@ -34,7 +34,7 @@ echo + NSLOTS = $NSLOTS
 # Create the results directory
 mkdir -p mitofinder_spades_All_Results
 
-# Define the directory containing the trimmed reads
+# Define the directory containing the spades contigs
 SAMPLEDIR_CONTIGS="full path to spades contigs"  
 
 # Loop through the R1 files
