@@ -38,8 +38,8 @@ mkdir -p mitofinder_spades_All_Results
 SAMPLEDIR_CONTIGS="path to spades contigs"  
 
 # Loop through the R1 files
-for GETSAMPLENAME in ${SAMPLEDIR_CONTIGS}/*_spades_contigs.fastq.gz; do
-    SAMPLENAME=$(basename "$GETSAMPLENAME" _spades_contigs.fastq.gz)
+for GETSAMPLENAME in ${SAMPLEDIR_CONTIGS}/*_spades_contigs.fasta; do
+    SAMPLENAME=$(basename "$GETSAMPLENAME" _spades_contigs.fasta.gz)
     
     # Create a directory for the current sample
     mkdir -p ./mitofinder_spades_All_Results/${SAMPLENAME}
@@ -52,7 +52,7 @@ for GETSAMPLENAME in ${SAMPLEDIR_CONTIGS}/*_spades_contigs.fastq.gz; do
         -j "${SAMPLENAME}_mitofinder_spades_results" \
         -o 5 \
         -r "path to reference data set.gb" \
-        -a "${SAMPLEDIR_CONTIGS}/${SAMPLENAME}_spades_contigs.fastq.gz" \
+        -a "${SAMPLEDIR_CONTIGS}/${SAMPLENAME}_spades_contigs.fasta" \
         --new-genes
 
     # Return to the original directory
@@ -63,9 +63,9 @@ done
 #These are extra steps that will copy the most important files from the results directories and group them together
 #
 mkdir -p mitofinder_spades_Final_Results
-for GETSAMPLENAME in ${SAMPLEDIR_CONTIGS}/*_spades_contigs.fastq.gz
+for GETSAMPLENAME in ${SAMPLEDIR_CONTIGS}/*_spades_contigs.fasta
 do
-SAMPLENAME=$(basename "$GETSAMPLENAME" _spades_contigs.fastq.gz)
+SAMPLENAME=$(basename "$GETSAMPLENAME" _spades_contigs.fasta)
 
 cp -r ./*spades_All_Results/${SAMPLENAME}/*_results/*_Final_Results ./mitofinder_spades_Final_Results
 cp    ./*spades_All_Results/${SAMPLENAME}/*.log ./mitofinder_spades_Final_Results
