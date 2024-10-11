@@ -35,7 +35,7 @@ echo + NSLOTS = $NSLOTS
 mkdir -p mitofinder_spades_All_Results
 
 # Define the directory containing the trimmed reads
-SAMPLEDIR_CONTIGS="path to spades contigs"  
+SAMPLEDIR_CONTIGS="full path to spades contigs"  
 
 # Loop through the R1 files
 for GETSAMPLENAME in ${SAMPLEDIR_CONTIGS}/*_spades_contigs.fasta; do
@@ -87,13 +87,13 @@ The files with the spades contigs need to end in '_spades_contigs.fastq.gz'. Alt
 
 These items need to be added in the script:
 
-SAMPLEDIR_CONTIGS="path to spades contigs"
+1. SAMPLEDIR_CONTIGS="path to spades contigs"
 
-After the '=' paste the full path to the spades contigs.
+   After the '=' paste the full path to the spades contigs.
 
-For flag -o write the digit for the genetic code (see GENETIC CODES below)
+2. For flag -o write the digit for the genetic code (see GENETIC CODES below)
 
-For flag -r include path to refrence data set in GenBank format (.gb). Or, premade reference data sets can be used. See "REFERENCE DATABASES" below.
+3. For flag -r include path to refrence data set in GenBank format (.gb). Or, premade reference data sets can be used. See "REFERENCE DATABASES" below.
 
 GENETIC CODES
  1. The Standard Code 
